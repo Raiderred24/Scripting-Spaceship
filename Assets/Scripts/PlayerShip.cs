@@ -37,6 +37,16 @@ public class PlayerShip : MonoBehaviour
         // Spin the Ship
         _rb.MoveRotation(_rb.rotation * turnOffset);
     }
+    public ParticleSystem thurster;
+    private void Update()
+    {
+        {
+            if(Input.GetKey(KeyCode.W))
+            {
+                thurster.Emit(1);
+            }
+        }
+    }
     public void Kill()
     {
         Debug.Log("Player has died!");
